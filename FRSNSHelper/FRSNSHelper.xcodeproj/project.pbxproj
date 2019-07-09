@@ -29,7 +29,7 @@
 		8981E31922D4681300E2EFE5 /* KakaoMessageTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E30E22D4681300E2EFE5 /* KakaoMessageTemplate.framework */; };
 		8981E31A22D4681300E2EFE5 /* NOTICE.md in Resources */ = {isa = PBXBuildFile; fileRef = 8981E30F22D4681300E2EFE5 /* NOTICE.md */; };
 		8981E31B22D4681300E2EFE5 /* KakaoPlusFriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8981E31022D4681300E2EFE5 /* KakaoPlusFriend.framework */; };
-		8981E31D22D46B5200E2EFE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8981E31C22D46B5200E2EFE5 /* GoogleService-Info.plist */; };
+		8981E31F22D46CCE00E2EFE5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8981E31E22D46CCE00E2EFE5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,7 @@
 		8981E30E22D4681300E2EFE5 /* KakaoMessageTemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoMessageTemplate.framework; sourceTree = "<group>"; };
 		8981E30F22D4681300E2EFE5 /* NOTICE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NOTICE.md; sourceTree = "<group>"; };
 		8981E31022D4681300E2EFE5 /* KakaoPlusFriend.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoPlusFriend.framework; sourceTree = "<group>"; };
-		8981E31C22D46B5200E2EFE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8981E31E22D46CCE00E2EFE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9143E8FA5B58445854AE7E6E /* Pods_FRSNSHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRSNSHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34C239F1388D41A384D4C86 /* Pods-FRSNSHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRSNSHelper.debug.xcconfig"; path = "Target Support Files/Pods-FRSNSHelper/Pods-FRSNSHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		DC630A582E1A64B5EF8B56BB /* Pods-FRSNSHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRSNSHelper.release.xcconfig"; path = "Target Support Files/Pods-FRSNSHelper/Pods-FRSNSHelper.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +93,7 @@
 		8981E2DA22D4657A00E2EFE5 = {
 			isa = PBXGroup;
 			children = (
+				8981E31E22D46CCE00E2EFE5 /* README.md */,
 				8981E2E522D4657A00E2EFE5 /* FRSNSHelper */,
 				8981E2E422D4657A00E2EFE5 /* Products */,
 				7E2AA9F5C3050FFF161D2440 /* Pods */,
@@ -118,7 +119,6 @@
 				8981E2EA22D4657A00E2EFE5 /* Main.storyboard */,
 				8981E2ED22D4657B00E2EFE5 /* Assets.xcassets */,
 				8981E2EF22D4657B00E2EFE5 /* LaunchScreen.storyboard */,
-				8981E31C22D46B5200E2EFE5 /* GoogleService-Info.plist */,
 				8981E2F222D4657B00E2EFE5 /* Info.plist */,
 			);
 			path = FRSNSHelper;
@@ -224,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8981E31722D4681300E2EFE5 /* LICENSE.txt in Resources */,
-				8981E31D22D46B5200E2EFE5 /* GoogleService-Info.plist in Resources */,
+				8981E31F22D46CCE00E2EFE5 /* README.md in Resources */,
 				8981E31422D4681300E2EFE5 /* NOTICE.txt in Resources */,
 				8981E31122D4681300E2EFE5 /* LICENSE_COMMENT in Resources */,
 				8981E31A22D4681300E2EFE5 /* NOTICE.md in Resources */,

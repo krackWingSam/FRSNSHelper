@@ -23,10 +23,10 @@ class NaverLoginManager: NSObject, NaverThirdPartyLoginConnectionDelegate {
         
         manager?.delegate = self
         
-        manager?.serviceUrlScheme = "recipefarmnaverlogin"
-        manager?.consumerKey = "kRWgs4OJA13EaSWPwvmm"
-        manager?.consumerSecret = "okMuA3pGfB"
-        manager?.appName = "레시피팜"
+        manager?.serviceUrlScheme = "com.Fermata.FRSNSHelper"
+        manager?.consumerKey = "Ndg1IpIK6MEDTx2zwUrU"
+        manager?.consumerSecret = "ocDbL8wcGh"
+        manager?.appName = "FRSNSTest"
     }
     
     public func getEmail(_ callback: @escaping emailResponseHandler) {
