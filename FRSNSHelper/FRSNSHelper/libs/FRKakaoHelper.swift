@@ -2,7 +2,7 @@
 //  KakaoLoginManager.swift
 //  RecipeFarm
 //
-//  Created by exs-mobile 강상우 on 19/06/2019.
+//  Created by Fermata 강상우 on 19/06/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
@@ -11,26 +11,25 @@ import KakaoOpenSDK
 import KakaoLink
 import KakaoMessageTemplate
 
-class KakaoLoginManager: NSObject {
+public class KakaoLoginManager: NSObject {
     
-    typealias kakaoEmailHandler = (String) -> Void
+    public typealias kakaoHandler = (KOUserMe?) -> Void
     
     static let shared = KakaoLoginManager()
     
     private var session: KOSession!
     
-    public var handler: kakaoEmailHandler?
+    public var handler: kakaoHandler?
     public var code: String?
     
     override init() {
         super.init()
         
-        
         session = KOSession.shared()
         print(session as Any)
     }
     
-    public func getEmail(_ handler: @escaping kakaoEmailHandler) {
+    public func getKakaoProfile(_ handler: @escaping kakaoHandler) {
         self.handler = handler
         login()
     }
@@ -38,7 +37,7 @@ class KakaoLoginManager: NSObject {
     public func shareContent(_ title: String, url: String) {
         guard let url = URL(string: url) else { return }
         KLKTalkLinkCenter.shared().sendScrap(with: url, success: { (warnings, arguments) in
-            print(warnings, arguments)
+            print(warnings as Any, arguments as Any)
         }) { (error) in
             print(error)
         }
@@ -106,9 +105,8 @@ class KakaoLoginManager: NSObject {
             }
             else {
                 print(me.account?.email! as Any)
-                guard let email = me.account?.email else { return }
                 if self.handler != nil {
-                    self.handler!(email)
+                    self.handler!(me)
                     self.handler = nil
                 }
             }

@@ -2,7 +2,7 @@
 //  FacebookLoginManager.swift
 //  RecipeFarm
 //
-//  Created by exs-mobile 강상우 on 17/06/2019.
+//  Created by Fermata 강상우 on 17/06/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
@@ -11,11 +11,11 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
 
-class FacebookLoginManager: NSObject {
+public class FacebookManager: NSObject {
     
-    typealias loginHandler = (Any?, Error?) -> Void
+    public typealias loginHandler = (Any?, Error?) -> Void
     
-    static var shared = FacebookLoginManager()
+    static var shared = FacebookManager()
     
     let manager = LoginManager()
     var token: AccessToken? {
@@ -40,8 +40,7 @@ class FacebookLoginManager: NSObject {
         dialog.show()
     }
     
-    
-    private func login(_ viewController: UIViewController, handler: @escaping loginHandler) {
+    public func login(_ viewController: UIViewController, handler: @escaping loginHandler) {
         manager.logIn(permissions: ["public_profile", "email"], from: viewController) { (result, error) in
             
             let request = GraphRequest(graphPath: "/me", parameters: ["fields":"email"])
@@ -57,16 +56,16 @@ class FacebookLoginManager: NSObject {
 }
 
 
-extension FacebookLoginManager: SharingDelegate {
-    func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
+extension FacebookManager: SharingDelegate {
+    public func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
         print()
     }
     
-    func sharer(_ sharer: Sharing, didFailWithError error: Error) {
+    public func sharer(_ sharer: Sharing, didFailWithError error: Error) {
         print()
     }
     
-    func sharerDidCancel(_ sharer: Sharing) {
+    public func sharerDidCancel(_ sharer: Sharing) {
         print()
     }
     

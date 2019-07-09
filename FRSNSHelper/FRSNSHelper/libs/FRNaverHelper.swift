@@ -2,7 +2,7 @@
 //  NaverLoginManager.swift
 //  RecipeFarm
 //
-//  Created by exs-mobile 강상우 on 17/06/2019.
+//  Created by Fermata 강상우 on 17/06/2019.
 //  Copyright © 2019 강상우. All rights reserved.
 //
 
@@ -50,19 +50,20 @@ class NaverLoginManager: NSObject, NaverThirdPartyLoginConnectionDelegate {
             login()
         }
         else if isValidToken() {
-            EXNetworkFunc.naver_GetEmail(manager!.accessToken) { (response) in
-                guard let data = response.data                                  else { return }
-                guard let message = data["message"] as? String                  else { return }
-                if message != "success"                                              { return } // get user info fail
-                guard let userData = data["response"] as? [AnyHashable: Any]    else { return }
-                guard let email = userData["email"] as? String                  else { return }
-                
-                self.email = email
-                
-                if self.callback_Email != nil {
-                    self.callback_Email!(email)
-                }
-            }
+            // TODO: Network API Communication needed
+//            EXNetworkFunc.naver_GetEmail(manager!.accessToken) { (response) in
+//                guard let data = response.data                                  else { return }
+//                guard let message = data["message"] as? String                  else { return }
+//                if message != "success"                                              { return } // get user info fail
+//                guard let userData = data["response"] as? [AnyHashable: Any]    else { return }
+//                guard let email = userData["email"] as? String                  else { return }
+//
+//                self.email = email
+//
+//                if self.callback_Email != nil {
+//                    self.callback_Email!(email)
+//                }
+//            }
         }
     }
     
