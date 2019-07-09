@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,6 +42,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    // MARK: for sns third party libs
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("url : \(url)")
+        
+        guard let scheme = url.scheme else {
+            return false
+        }
+        print("scheme : \(scheme)")
+        
+        if scheme.hasPrefix("fb\(Settings.appID.description)") {
+            return ApplicationDelegate.shared.application(app, open: url, options: options)
+        }
+        else if scheme.hasPrefix("recipefarmnaverlogin") {
+            //            NaverLoginManager.shared.receivedURL(url)
+            return NaverLoginManager.shared.application(app, open: url, options: options)
+        }
+        else if scheme.contains("kakao") {
+            return KakaoLoginManager.shared.application(app, open: url, options: options)
+        }
+        
+        return false
+    }
 
 }
 

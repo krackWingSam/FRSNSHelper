@@ -1,0 +1,6 @@
+framework module Pods_FRSNSHelper {
+  umbrella header "Pods-FRSNSHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,14 +20,47 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-TI-Tfl">
                                 <rect key="frame" x="20" y="74" width="374" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Naver Login"/>
+                                <connections>
+                                    <action selector="action_NaverLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbM-Bk-dsI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-YG-j5W">
+                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <state key="normal" title="Kakao Login"/>
+                                <connections>
+                                    <action selector="action_KakaoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imQ-lB-maY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcD-EI-qLA">
+                                <rect key="frame" x="20" y="194" width="374" height="30"/>
+                                <state key="normal" title="Facebook Login"/>
+                                <connections>
+                                    <action selector="action_FacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lq1-HM-7Qa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbh-ob-UWJ">
+                                <rect key="frame" x="20" y="254" width="374" height="30"/>
+                                <state key="normal" title="Google Login"/>
+                                <connections>
+                                    <action selector="action_GoogleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qs-xF-vTH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gPN-YG-j5W" firstAttribute="top" secondItem="SUL-TI-Tfl" secondAttribute="bottom" constant="30" id="2fJ-IA-BVC"/>
+                            <constraint firstItem="tbh-ob-UWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5nf-TB-fIs"/>
+                            <constraint firstItem="dcD-EI-qLA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="78R-m3-rEb"/>
                             <constraint firstItem="SUL-TI-Tfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Ke-7s-eJU"/>
+                            <constraint firstItem="gPN-YG-j5W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K7X-J8-GaR"/>
+                            <constraint firstItem="dcD-EI-qLA" firstAttribute="top" secondItem="gPN-YG-j5W" secondAttribute="bottom" constant="30" id="NX6-1x-q0h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gPN-YG-j5W" secondAttribute="trailing" constant="20" id="Tao-UZ-NL5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbh-ob-UWJ" secondAttribute="trailing" constant="20" id="UNf-py-q7h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SUL-TI-Tfl" secondAttribute="trailing" constant="20" id="XPF-ZC-49E"/>
+                            <constraint firstItem="tbh-ob-UWJ" firstAttribute="top" secondItem="dcD-EI-qLA" secondAttribute="bottom" constant="30" id="ce7-QK-M68"/>
                             <constraint firstItem="SUL-TI-Tfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gbB-TD-HgK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcD-EI-qLA" secondAttribute="trailing" constant="20" id="nkG-EM-XVC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
